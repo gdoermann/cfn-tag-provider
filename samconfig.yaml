@@ -33,37 +33,3 @@ default:
   local_start_lambda:
     parameters:
       warm_containers: EAGER
-
-demo:
-    global:
-      parameters:
-        stack_name: cfn-tag-provider
-    build:
-      parameters:
-        cached: true
-        parallel: true
-    validate:
-      parameters:
-        lint: true
-    deploy:
-      parameters:
-        template_file: cloudformation/demo-stack.yaml
-        capabilities: CAPABILITY_NAMED_IAM
-        confirm_changeset: true
-        image_repositories: []
-        s3_prefix: cfn-tag-provider
-        region: us-east-1
-        resolve_s3: true
-    package:
-      parameters:
-        region: us-east-1
-        resolve_s3: true
-    sync:
-      parameters:
-        watch: true
-    local_start_api:
-      parameters:
-        warm_containers: EAGER
-    local_start_lambda:
-      parameters:
-        warm_containers: EAGER

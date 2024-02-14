@@ -1,9 +1,14 @@
+include .env
 include Makefile.mk
 
-NAME=cfn-tag-provider
-AWS_REGION=eu-central-1
-S3_BUCKET_PREFIX=binxio-public
-S3_BUCKET=$(S3_BUCKET_PREFIX)-$(AWS_REGION)
+NAME ?= cfn-tag-provider
+AWS_REGION ?= eu-central-1
+S3_BUCKET_PREFIX ?= binxio-public
+
+# Check if S3_BUCKET is empty and conditionally assign it
+ifeq ($(S3_BUCKET),)
+S3_BUCKET := $(S3_BUCKET_PREFIX)-$(AWS_REGION)
+endif
 
 ALL_REGIONS=$(shell printf "import boto3\nprint('\\\n'.join(map(lambda r: r['RegionName'], boto3.client('ec2').describe_regions()['Regions'])))\n" | python | grep -v '^$(AWS_REGION)$$')
 
@@ -48,6 +53,7 @@ do-build: target/$(NAME)-$(VERSION).zip
 	bin/add-allow-tag-actions-statement
 
 target/$(NAME)-$(VERSION).zip: src/*.py requirements.txt Dockerfile.lambda
+	echo "deploying to $(S3_BUCKET)"
 	mkdir -p target
 	docker build --build-arg ZIPFILE=$(NAME)-$(VERSION).zip -t $(NAME)-lambda:$(VERSION) -f Dockerfile.lambda . && \
 		ID=$$(docker create $(NAME)-lambda:$(VERSION) /bin/true) && \

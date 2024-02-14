@@ -1,0 +1,10 @@
+version: 0.1
+inherits: samconfig.yaml
+
+default:
+    global:
+      parameters:
+        stack_name: demo-stack
+    deploy:
+      parameters:
+        template_file: cloudformation/demo-stack.yaml

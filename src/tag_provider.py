@@ -1,12 +1,9 @@
-import os
-import json
 import logging
+
 import boto3
-import requests
 from cfn_resource_provider import ResourceProvider
 
 log = logging.getLogger()
-log.setLevel(os.environ.get("LOG_LEVEL", "INFO"))
 
 request_schema = {
     "$schema": "http://json-schema.org/draft-04/schema#",
@@ -24,7 +21,7 @@ request_schema = {
 
 class TagProvider(ResourceProvider):
     def __init__(self):
-        super(TagProvider, self).__init__()
+        super().__init__()
         self.rg_tagging = boto3.client("resourcegroupstaggingapi")
 
     @property
@@ -76,6 +73,7 @@ class TagProvider(ResourceProvider):
             response = self.rg_tagging.untag_resources(
                 ResourceARNList=self.resource_arns, TagKeys=keys
             )
+            log.info("Delete Old Tag Response: %s", response)
 
     def delete(self):
         keys = list(self.tags.keys())
@@ -83,6 +81,7 @@ class TagProvider(ResourceProvider):
             response = self.rg_tagging.untag_resources(
                 ResourceARNList=self.resource_arns, TagKeys=keys
             )
+            log.info("Delete Tag Response: %s", response)
 
 
 provider = TagProvider()

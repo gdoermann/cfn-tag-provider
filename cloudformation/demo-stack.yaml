@@ -1,5 +1,7 @@
 AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
 Description: Tag Provider Demo
+
 Parameters:
   Date:
     Type: String
@@ -23,4 +25,4 @@ Resources:
       Tags:
         EIPPoolName: eip-bastion-pool
         LastUpdate: !Ref Date
-      ServiceToken: !Sub 'arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:cfn-tag-provider'
+      ServiceToken: !ImportValue CFNTagProvider

@@ -22,9 +22,13 @@ def resource_arn():
     ssm = boto3.client("ssm")
     name = f"{uuid.uuid4()}"
     account = boto3.client("sts").get_caller_identity()["Account"]
-    ssm.put_parameter(Name=name, Value=name, Type="String", Overwrite=True)
-    yield f"arn:aws:ssm:eu-central-1:{account}:parameter/{name}"
-    ssm.delete_parameter(Name=name)
+    region = boto3.session.Session().region_name
+    response = ssm.put_parameter(Name=name, Value=name, Type="String", Overwrite=True)
+    assert response["ResponseMetadata"]["HTTPStatusCode"] == 200
+    yield f"arn:aws:ssm:{region}:{account}:parameter/{name}"
+    response = ssm.delete_parameter(Name=name)
+    if not response["ResponseMetadata"]["HTTPStatusCode"] == 200:
+        print(f"Failed to delete parameter {name}")
 
 
 def test_crud(resource_arn):

@@ -4,7 +4,6 @@ default:
   global:
     parameters:
       stack_name: cfn-tag-provider
-      template_file: cloudformation/cfn-resource-provider.yaml
   build:
     parameters:
       cached: true

@@ -44,7 +44,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Description: CloudFormation Tag Provider
-      CodeUri: ../src/
+      CodeUri: src/
       FunctionName: cfn-tag-provider
       Handler: provider.handler
       Timeout: 600
@@ -56,3 +56,5 @@ Outputs:
   CFNTagProvider:
     Description: The Lambda function for the CloudFormation Tag Provider
     Value: !GetAtt CFNTagProvider.Arn
+    Export:
+      Name: CFNTagProvider

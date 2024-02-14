@@ -27,7 +27,7 @@ To deploy the provider, type:
 aws cloudformation create-stack \
         --capabilities CAPABILITY_IAM \
         --stack-name cfn-tag-provider \
-        --template-body file://./cloudformation/cfn-resource-provider.yaml
+        --template-body file://./provider/template.yaml
 
 aws cloudformation wait stack-create-complete  --stack-name cfn-tag-provider
 ```
@@ -42,7 +42,7 @@ In order to deploy the demo, type:
 aws cloudformation create-stack \
         --capabilities CAPABILITY_NAMED_IAM \
         --stack-name cfn-tag-provider-demo \
-        --template-body file://./cloudformation/demo.yaml
+        --template-body file://./demo/template.yaml
 
 aws cloudformation wait stack-create-complete  --stack-name cfn-tag-provider-demo
 ```

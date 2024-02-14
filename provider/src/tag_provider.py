@@ -69,23 +69,16 @@ class TagProvider(ResourceProvider):
 
     def delete_old(self):
         keys = list(self.old_tags.keys())
-        if keys:
-            response = self.rg_tagging.untag_resources(
-                ResourceARNList=self.resource_arns, TagKeys=keys
-            )
-            log.info("Delete Old Tag Response: %s", response)
+        self.delete(keys=keys)
 
-    def delete(self):
-        keys = list(self.tags.keys())
-        if keys:
-            response = self.rg_tagging.untag_resources(
-                ResourceARNList=self.resource_arns, TagKeys=keys
-            )
-            log.info("Delete Tag Response: %s", response)
-
-
-provider = TagProvider()
-
-
-def handler(request, context):
-    return provider.handle(request, context)
+    def delete(self, keys=None):
+        try:
+            if keys is None:
+                keys = list(self.tags.keys())
+            if keys:
+                response = self.rg_tagging.untag_resources(
+                    ResourceARNList=self.resource_arns, TagKeys=keys
+                )
+                log.info("Delete Tag Response: %s", response)
+        except Exception:
+            log.error('Error deleting tags: ', list(self.tags.keys()))

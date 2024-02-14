@@ -72,7 +72,7 @@ clean:
 	rm -rf src/*.pyc tests/*.pyc
 
 test: venv
-	for i in $$PWD/cloudformation/*; do \
+	for i in $$PWD/*/template.yaml; do \
 		aws cloudformation validate-template --template-body file://$$i > /dev/null || exit 1; \
 	done
 	. ./venv/bin/activate && \
@@ -92,7 +92,7 @@ deploy-provider: deploy
 	aws cloudformation $$CFN_COMMAND-stack \
 		--capabilities CAPABILITY_IAM \
 		--stack-name $(NAME) \
-		--template-body file://cloudformation/cfn-resource-provider.yaml \
+		--template-body file://provider/template.yaml \
 		--parameters ParameterKey=CFNCustomProviderZipFileName,ParameterValue=lambdas/$(NAME)-$(VERSION).zip; \
 	aws cloudformation wait stack-$$CFN_COMMAND-complete --stack-name $(NAME) ;
 

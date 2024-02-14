@@ -33,6 +33,9 @@ Resources:
           - Effect: Allow
             Sid: GeneratedTagActionsFromAPI
             Action:
+              - accessanalyzer:ListTagsForResource
+              - accessanalyzer:TagResource
+              - accessanalyzer:Get*
               - acm:AddTagsToCertificate
               - acm:ListTagsForCertificate
               - acm:RemoveTagsFromCertificate
@@ -43,6 +46,9 @@ Resources:
               - alexaforbusiness:ListTags
               - alexaforbusiness:TagResource
               - alexaforbusiness:Get*
+              - amp:ListTagsForResource
+              - amp:TagResource
+              - amp:Get*
               - amplify:ListTagsForResource
               - amplify:TagResource
               - amplify:Get*
@@ -52,9 +58,30 @@ Resources:
               - apigatewayv2:GetTags
               - apigatewayv2:TagResource
               - apigatewayv2:Get*
+              - appconfig:ListTagsForResource
+              - appconfig:TagResource
+              - appconfig:Get*
+              - appfabric:ListTagsForResource
+              - appfabric:TagResource
+              - appfabric:Get*
+              - appflow:ListTagsForResource
+              - appflow:TagResource
+              - appflow:Get*
+              - appintegrations:ListTagsForResource
+              - appintegrations:TagResource
+              - appintegrations:Get*
+              - application-autoscaling:ListTagsForResource
+              - application-autoscaling:TagResource
+              - application-autoscaling:Get*
+              - application-insights:ListTagsForResource
+              - application-insights:TagResource
+              - application-insights:Get*
               - appmesh:ListTagsForResource
               - appmesh:TagResource
               - appmesh:Get*
+              - apprunner:ListTagsForResource
+              - apprunner:TagResource
+              - apprunner:Get*
               - appstream:ListTagsForResource
               - appstream:TagResource
               - appstream:Get*
@@ -64,15 +91,77 @@ Resources:
               - athena:ListTagsForResource
               - athena:TagResource
               - athena:Get*
+              - auditmanager:ListTagsForResource
+              - auditmanager:TagResource
+              - auditmanager:Get*
               - autoscaling:CreateOrUpdateTags
               - autoscaling:DeleteTags
               - autoscaling:DescribeTags
               - autoscaling:Get*
+              - b2bi:ListTagsForResource
+              - b2bi:TagResource
+              - b2bi:Get*
               - backup:ListTags
               - backup:TagResource
               - backup:Get*
+              - backup-gateway:ListTagsForResource
+              - backup-gateway:TagResource
+              - backup-gateway:Get*
+              - batch:ListTagsForResource
+              - batch:TagResource
+              - batch:Get*
+              - bcm-data-exports:ListTagsForResource
+              - bcm-data-exports:TagResource
+              - bcm-data-exports:Get*
+              - bedrock:ListTagsForResource
+              - bedrock:TagResource
+              - bedrock:Get*
+              - bedrock-agent:ListTagsForResource
+              - bedrock-agent:TagResource
+              - bedrock-agent:Get*
+              - billingconductor:ListTagsForResource
+              - billingconductor:TagResource
+              - billingconductor:Get*
+              - braket:ListTagsForResource
+              - braket:TagResource
+              - braket:Get*
               - ce:GetTags
+              - ce:ListCostAllocationTags
+              - ce:ListTagsForResource
+              - ce:TagResource
+              - ce:UpdateCostAllocationTagsStatus
               - ce:Get*
+              - chime:ListAttendeeTags
+              - chime:ListMeetingTags
+              - chime:ListTagsForResource
+              - chime:TagAttendee
+              - chime:TagMeeting
+              - chime:TagResource
+              - chime:Get*
+              - chime-sdk-identity:ListTagsForResource
+              - chime-sdk-identity:TagResource
+              - chime-sdk-identity:Get*
+              - chime-sdk-media-pipelines:ListTagsForResource
+              - chime-sdk-media-pipelines:TagResource
+              - chime-sdk-media-pipelines:Get*
+              - chime-sdk-meetings:ListTagsForResource
+              - chime-sdk-meetings:TagResource
+              - chime-sdk-meetings:Get*
+              - chime-sdk-messaging:ListTagsForResource
+              - chime-sdk-messaging:TagResource
+              - chime-sdk-messaging:Get*
+              - chime-sdk-voice:ListTagsForResource
+              - chime-sdk-voice:TagResource
+              - chime-sdk-voice:Get*
+              - cleanrooms:ListTagsForResource
+              - cleanrooms:TagResource
+              - cleanrooms:Get*
+              - cleanroomsml:ListTagsForResource
+              - cleanroomsml:TagResource
+              - cleanroomsml:Get*
+              - cloud9:ListTagsForResource
+              - cloud9:TagResource
+              - cloud9:Get*
               - clouddirectory:ListTagsForResource
               - clouddirectory:TagResource
               - clouddirectory:Get*
@@ -95,6 +184,9 @@ Resources:
               - cloudwatch:ListTagsForResource
               - cloudwatch:TagResource
               - cloudwatch:Get*
+              - codeartifact:ListTagsForResource
+              - codeartifact:TagResource
+              - codeartifact:Get*
               - codecommit:ListTagsForResource
               - codecommit:TagResource
               - codecommit:Get*
@@ -103,13 +195,30 @@ Resources:
               - codedeploy:RemoveTagsFromOnPremisesInstances
               - codedeploy:TagResource
               - codedeploy:Get*
+              - codeguru-reviewer:ListTagsForResource
+              - codeguru-reviewer:TagResource
+              - codeguru-reviewer:Get*
+              - codeguru-security:ListTagsForResource
+              - codeguru-security:TagResource
+              - codeguru-security:Get*
+              - codeguruprofiler:ListTagsForResource
+              - codeguruprofiler:TagResource
+              - codeguruprofiler:Get*
               - codepipeline:ListTagsForResource
               - codepipeline:TagResource
               - codepipeline:Get*
               - codestar:ListTagsForProject
               - codestar:TagProject
               - codestar:Get*
+              - codestar-connections:ListTagsForResource
+              - codestar-connections:TagResource
+              - codestar-connections:Get*
+              - codestar-notifications:ListTagsForResource
+              - codestar-notifications:TagResource
+              - codestar-notifications:Get*
+              - cognito-identity:GetPrincipalTagAttributeMap
               - cognito-identity:ListTagsForResource
+              - cognito-identity:SetPrincipalTagAttributeMap
               - cognito-identity:TagResource
               - cognito-identity:Get*
               - cognito-idp:ListTagsForResource
@@ -121,15 +230,47 @@ Resources:
               - config:ListTagsForResource
               - config:TagResource
               - config:Get*
+              - connect:ListTagsForResource
+              - connect:SearchResourceTags
+              - connect:TagContact
+              - connect:TagResource
+              - connect:Get*
+              - connectcampaigns:ListTagsForResource
+              - connectcampaigns:TagResource
+              - connectcampaigns:Get*
+              - connectcases:ListTagsForResource
+              - connectcases:TagResource
+              - connectcases:Get*
+              - controltower:ListTagsForResource
+              - controltower:TagResource
+              - controltower:Get*
+              - cur:ListTagsForResource
+              - cur:TagResource
+              - cur:Get*
+              - customer-profiles:ListTagsForResource
+              - customer-profiles:TagResource
+              - customer-profiles:Get*
+              - databrew:ListTagsForResource
+              - databrew:TagResource
+              - databrew:Get*
+              - dataexchange:ListTagsForResource
+              - dataexchange:TagResource
+              - dataexchange:Get*
               - datapipeline:AddTags
               - datapipeline:RemoveTags
               - datapipeline:Get*
               - datasync:ListTagsForResource
               - datasync:TagResource
               - datasync:Get*
+              - datazone:ListTagsForResource
+              - datazone:TagResource
+              - datazone:Get*
               - dax:ListTags
               - dax:TagResource
               - dax:Get*
+              - detective:ListTagsForResource
+              - detective:TagResource
+              - detective:Get*
               - devicefarm:ListTagsForResource
               - devicefarm:TagResource
               - devicefarm:Get*
@@ -140,6 +281,9 @@ Resources:
               - discovery:DeleteTags
               - discovery:DescribeTags
               - discovery:Get*
+              - dlm:ListTagsForResource
+              - dlm:TagResource
+              - dlm:Get*
               - dms:AddTagsToResource
               - dms:ListTagsForResource
               - dms:RemoveTagsFromResource
@@ -148,6 +292,12 @@ Resources:
               - docdb:ListTagsForResource
               - docdb:RemoveTagsFromResource
               - docdb:Get*
+              - docdb-elastic:ListTagsForResource
+              - docdb-elastic:TagResource
+              - docdb-elastic:Get*
+              - drs:ListTagsForResource
+              - drs:TagResource
+              - drs:Get*
               - ds:AddTagsToResource
               - ds:ListTagsForResource
               - ds:RemoveTagsFromResource
@@ -160,15 +310,28 @@ Resources:
               - ec2:DescribeTags
               - ec2:Get*
               - ecr:ListTagsForResource
+              - ecr:PutImageTagMutability
               - ecr:TagResource
               - ecr:Get*
+              - ecr-public:DescribeImageTags
+              - ecr-public:ListTagsForResource
+              - ecr-public:TagResource
+              - ecr-public:Get*
               - ecs:ListTagsForResource
               - ecs:TagResource
               - ecs:Get*
               - efs:CreateTags
               - efs:DeleteTags
               - efs:DescribeTags
+              - efs:ListTagsForResource
+              - efs:TagResource
               - efs:Get*
+              - eks:ListTagsForResource
+              - eks:TagResource
+              - eks:Get*
+              - elastic-inference:ListTagsForResource
+              - elastic-inference:TagResource
+              - elastic-inference:Get*
               - elasticache:AddTagsToResource
               - elasticache:ListTagsForResource
               - elasticache:RemoveTagsFromResource
@@ -187,6 +350,15 @@ Resources:
               - emr:AddTags
               - emr:RemoveTags
               - emr:Get*
+              - emr-containers:ListTagsForResource
+              - emr-containers:TagResource
+              - emr-containers:Get*
+              - emr-serverless:ListTagsForResource
+              - emr-serverless:TagResource
+              - emr-serverless:Get*
+              - entityresolution:ListTagsForResource
+              - entityresolution:TagResource
+              - entityresolution:Get*
               - es:AddTags
               - es:ListTags
               - es:RemoveTags
@@ -194,36 +366,93 @@ Resources:
               - events:ListTagsForResource
               - events:TagResource
               - events:Get*
+              - evidently:ListTagsForResource
+              - evidently:TagResource
+              - evidently:Get*
+              - finspace:ListTagsForResource
+              - finspace:TagResource
+              - finspace:Get*
               - firehose:ListTagsForDeliveryStream
               - firehose:TagDeliveryStream
               - firehose:Get*
+              - fis:ListTagsForResource
+              - fis:TagResource
+              - fis:Get*
+              - fms:ListTagsForResource
+              - fms:TagResource
+              - fms:Get*
+              - forecast:ListTagsForResource
+              - forecast:TagResource
+              - forecast:Get*
+              - frauddetector:ListTagsForResource
+              - frauddetector:TagResource
+              - frauddetector:Get*
               - fsx:ListTagsForResource
               - fsx:TagResource
               - fsx:Get*
+              - gamelift:ListTagsForResource
+              - gamelift:TagResource
+              - gamelift:Get*
               - glacier:AddTagsToVault
               - glacier:ListTagsForVault
               - glacier:RemoveTagsFromVault
               - glacier:Get*
+              - globalaccelerator:ListTagsForResource
+              - globalaccelerator:TagResource
+              - globalaccelerator:Get*
               - glue:GetTags
               - glue:TagResource
               - glue:Get*
+              - grafana:ListTagsForResource
+              - grafana:TagResource
+              - grafana:Get*
               - greengrass:ListTagsForResource
               - greengrass:TagResource
               - greengrass:Get*
+              - greengrassv2:ListTagsForResource
+              - greengrassv2:TagResource
+              - greengrassv2:Get*
               - groundstation:ListTagsForResource
               - groundstation:TagResource
               - groundstation:Get*
               - guardduty:ListTagsForResource
               - guardduty:TagResource
               - guardduty:Get*
+              - healthlake:ListTagsForResource
+              - healthlake:TagResource
+              - healthlake:Get*
+              - honeycode:ListTagsForResource
+              - honeycode:TagResource
+              - honeycode:Get*
+              - iam:ListInstanceProfileTags
+              - iam:ListMFADeviceTags
+              - iam:ListOpenIDConnectProviderTags
+              - iam:ListPolicyTags
               - iam:ListRoleTags
+              - iam:ListSAMLProviderTags
+              - iam:ListServerCertificateTags
               - iam:ListUserTags
+              - iam:TagInstanceProfile
+              - iam:TagMFADevice
+              - iam:TagOpenIDConnectProvider
+              - iam:TagPolicy
               - iam:TagRole
+              - iam:TagSAMLProvider
+              - iam:TagServerCertificate
               - iam:TagUser
               - iam:Get*
+              - imagebuilder:ListTagsForResource
+              - imagebuilder:TagResource
+              - imagebuilder:Get*
               - inspector:ListTagsForResource
               - inspector:SetTagsForResource
               - inspector:Get*
+              - inspector2:ListTagsForResource
+              - inspector2:TagResource
+              - inspector2:Get*
+              - internetmonitor:ListTagsForResource
+              - internetmonitor:TagResource
+              - internetmonitor:Get*
               - iot:ListTagsForResource
               - iot:TagResource
               - iot:Get*
@@ -236,15 +465,54 @@ Resources:
               - iotanalytics:ListTagsForResource
               - iotanalytics:TagResource
               - iotanalytics:Get*
+              - iotdeviceadvisor:ListTagsForResource
+              - iotdeviceadvisor:TagResource
+              - iotdeviceadvisor:Get*
               - iotevents:ListTagsForResource
               - iotevents:TagResource
               - iotevents:Get*
+              - iotfleethub:ListTagsForResource
+              - iotfleethub:TagResource
+              - iotfleethub:Get*
+              - iotfleetwise:ListTagsForResource
+              - iotfleetwise:TagResource
+              - iotfleetwise:Get*
+              - iotsecuretunneling:ListTagsForResource
+              - iotsecuretunneling:TagResource
+              - iotsecuretunneling:Get*
+              - iotsitewise:ListTagsForResource
+              - iotsitewise:TagResource
+              - iotsitewise:Get*
               - iotthingsgraph:ListTagsForResource
               - iotthingsgraph:TagResource
               - iotthingsgraph:Get*
+              - iottwinmaker:ListTagsForResource
+              - iottwinmaker:TagResource
+              - iottwinmaker:Get*
+              - iotwireless:ListTagsForResource
+              - iotwireless:TagResource
+              - iotwireless:Get*
+              - ivs:ListTagsForResource
+              - ivs:TagResource
+              - ivs:Get*
+              - ivs-realtime:ListTagsForResource
+              - ivs-realtime:TagResource
+              - ivs-realtime:Get*
+              - ivschat:ListTagsForResource
+              - ivschat:TagResource
+              - ivschat:Get*
               - kafka:ListTagsForResource
               - kafka:TagResource
               - kafka:Get*
+              - kendra:ListTagsForResource
+              - kendra:TagResource
+              - kendra:Get*
+              - kendra-ranking:ListTagsForResource
+              - kendra-ranking:TagResource
+              - kendra-ranking:Get*
+              - keyspaces:ListTagsForResource
+              - keyspaces:TagResource
+              - keyspaces:Get*
               - kinesis:AddTagsToStream
               - kinesis:ListTagsForStream
               - kinesis:RemoveTagsFromStream
@@ -255,27 +523,75 @@ Resources:
               - kinesisanalyticsv2:ListTagsForResource
               - kinesisanalyticsv2:TagResource
               - kinesisanalyticsv2:Get*
+              - kinesisvideo:ListTagsForResource
               - kinesisvideo:ListTagsForStream
+              - kinesisvideo:TagResource
               - kinesisvideo:TagStream
               - kinesisvideo:Get*
               - kms:ListResourceTags
               - kms:TagResource
               - kms:Get*
+              - lakeformation:AddLFTagsToResource
+              - lakeformation:CreateLFTag
+              - lakeformation:DeleteLFTag
+              - lakeformation:GetLFTag
+              - lakeformation:GetResourceLFTags
+              - lakeformation:ListLFTags
+              - lakeformation:RemoveLFTagsFromResource
+              - lakeformation:SearchDatabasesByLFTags
+              - lakeformation:SearchTablesByLFTags
+              - lakeformation:UpdateLFTag
+              - lakeformation:Get*
               - lambda:ListTags
               - lambda:TagResource
               - lambda:Get*
+              - lex-models:ListTagsForResource
+              - lex-models:TagResource
+              - lex-models:Get*
+              - lexv2-models:ListTagsForResource
+              - lexv2-models:TagResource
+              - lexv2-models:Get*
               - license-manager:ListTagsForResource
               - license-manager:TagResource
               - license-manager:Get*
               - lightsail:TagResource
               - lightsail:Get*
+              - location:ListTagsForResource
+              - location:TagResource
+              - location:Get*
+              - logs:ListTagsForResource
               - logs:ListTagsLogGroup
               - logs:TagLogGroup
+              - logs:TagResource
               - logs:Get*
+              - lookoutequipment:ListTagsForResource
+              - lookoutequipment:TagResource
+              - lookoutequipment:Get*
+              - lookoutmetrics:ListTagsForResource
+              - lookoutmetrics:TagResource
+              - lookoutmetrics:Get*
+              - lookoutvision:ListTagsForResource
+              - lookoutvision:TagResource
+              - lookoutvision:Get*
+              - m2:ListTagsForResource
+              - m2:TagResource
+              - m2:Get*
               - machinelearning:AddTags
               - machinelearning:DeleteTags
               - machinelearning:DescribeTags
               - machinelearning:Get*
+              - macie2:ListTagsForResource
+              - macie2:TagResource
+              - macie2:Get*
+              - managedblockchain:ListTagsForResource
+              - managedblockchain:TagResource
+              - managedblockchain:Get*
+              - marketplace-catalog:ListTagsForResource
+              - marketplace-catalog:TagResource
+              - marketplace-catalog:Get*
+              - marketplace-deployment:ListTagsForResource
+              - marketplace-deployment:TagResource
+              - marketplace-deployment:Get*
               - mediaconnect:ListTagsForResource
               - mediaconnect:TagResource
               - mediaconnect:Get*
@@ -289,34 +605,137 @@ Resources:
               - mediapackage:ListTagsForResource
               - mediapackage:TagResource
               - mediapackage:Get*
+              - mediapackage-vod:ListTagsForResource
+              - mediapackage-vod:TagResource
+              - mediapackage-vod:Get*
+              - mediapackagev2:ListTagsForResource
+              - mediapackagev2:TagResource
+              - mediapackagev2:Get*
               - mediastore:ListTagsForResource
               - mediastore:TagResource
               - mediastore:Get*
               - mediatailor:ListTagsForResource
               - mediatailor:TagResource
               - mediatailor:Get*
+              - medical-imaging:ListTagsForResource
+              - medical-imaging:TagResource
+              - medical-imaging:Get*
+              - memorydb:ListTags
+              - memorydb:TagResource
+              - memorydb:Get*
+              - mgn:ListTagsForResource
+              - mgn:TagResource
+              - mgn:Get*
+              - migration-hub-refactor-spaces:ListTagsForResource
+              - migration-hub-refactor-spaces:TagResource
+              - migration-hub-refactor-spaces:Get*
+              - migrationhuborchestrator:ListTagsForResource
+              - migrationhuborchestrator:TagResource
+              - migrationhuborchestrator:Get*
               - mq:CreateTags
               - mq:DeleteTags
               - mq:ListTags
               - mq:Get*
+              - mwaa:ListTagsForResource
+              - mwaa:TagResource
+              - mwaa:Get*
               - neptune:AddTagsToResource
               - neptune:ListTagsForResource
               - neptune:RemoveTagsFromResource
               - neptune:Get*
+              - neptune-graph:ListTagsForResource
+              - neptune-graph:TagResource
+              - neptune-graph:Get*
+              - network-firewall:ListTagsForResource
+              - network-firewall:TagResource
+              - network-firewall:Get*
+              - networkmanager:ListTagsForResource
+              - networkmanager:TagResource
+              - networkmanager:Get*
+              - networkmonitor:ListTagsForResource
+              - networkmonitor:TagResource
+              - networkmonitor:Get*
+              - nimble:ListTagsForResource
+              - nimble:TagResource
+              - nimble:Get*
+              - oam:ListTagsForResource
+              - oam:TagResource
+              - oam:Get*
+              - omics:ListTagsForResource
+              - omics:TagResource
+              - omics:Get*
+              - opensearch:AddTags
+              - opensearch:ListTags
+              - opensearch:RemoveTags
+              - opensearch:Get*
+              - opensearchserverless:ListTagsForResource
+              - opensearchserverless:TagResource
+              - opensearchserverless:Get*
               - opsworks:ListTags
               - opsworks:TagResource
               - opsworks:Get*
+              - opsworkscm:ListTagsForResource
+              - opsworkscm:TagResource
+              - opsworkscm:Get*
               - organizations:ListTagsForResource
               - organizations:TagResource
               - organizations:Get*
+              - osis:ListTagsForResource
+              - osis:TagResource
+              - osis:Get*
+              - outposts:ListTagsForResource
+              - outposts:TagResource
+              - outposts:Get*
+              - panorama:ListTagsForResource
+              - panorama:TagResource
+              - panorama:Get*
+              - payment-cryptography:ListTagsForResource
+              - payment-cryptography:TagResource
+              - payment-cryptography:Get*
+              - pca-connector-ad:ListTagsForResource
+              - pca-connector-ad:TagResource
+              - pca-connector-ad:Get*
+              - personalize:ListTagsForResource
+              - personalize:TagResource
+              - personalize:Get*
+              - pi:ListTagsForResource
+              - pi:TagResource
+              - pi:Get*
               - pinpoint:ListTagsForResource
               - pinpoint:TagResource
               - pinpoint:Get*
               - pinpoint-email:ListTagsForResource
               - pinpoint-email:TagResource
               - pinpoint-email:Get*
+              - pinpoint-sms-voice-v2:ListTagsForResource
+              - pinpoint-sms-voice-v2:TagResource
+              - pinpoint-sms-voice-v2:Get*
+              - pipes:ListTagsForResource
+              - pipes:TagResource
+              - pipes:Get*
+              - privatenetworks:ListTagsForResource
+              - privatenetworks:TagResource
+              - privatenetworks:Get*
+              - proton:ListTagsForResource
+              - proton:TagResource
+              - proton:Get*
+              - qbusiness:ListTagsForResource
+              - qbusiness:TagResource
+              - qbusiness:Get*
+              - qconnect:ListTagsForResource
+              - qconnect:TagResource
+              - qconnect:Get*
+              - qldb:ListTagsForResource
+              - qldb:TagResource
+              - qldb:Get*
+              - quicksight:ListTagsForResource
+              - quicksight:TagResource
+              - quicksight:Get*
               - ram:TagResource
               - ram:Get*
+              - rbin:ListTagsForResource
+              - rbin:TagResource
+              - rbin:Get*
               - rds:AddTagsToResource
               - rds:ListTagsForResource
               - rds:RemoveTagsFromResource
@@ -325,6 +744,21 @@ Resources:
               - redshift:DeleteTags
               - redshift:DescribeTags
               - redshift:Get*
+              - redshift-serverless:ListTagsForResource
+              - redshift-serverless:TagResource
+              - redshift-serverless:Get*
+              - rekognition:ListTagsForResource
+              - rekognition:TagResource
+              - rekognition:Get*
+              - repostspace:ListTagsForResource
+              - repostspace:TagResource
+              - repostspace:Get*
+              - resiliencehub:ListTagsForResource
+              - resiliencehub:TagResource
+              - resiliencehub:Get*
+              - resource-explorer-2:ListTagsForResource
+              - resource-explorer-2:TagResource
+              - resource-explorer-2:Get*
               - resource-groups:GetTags
               - resource-groups:Tag
               - resource-groups:Get*
@@ -335,10 +769,19 @@ Resources:
               - robomaker:ListTagsForResource
               - robomaker:TagResource
               - robomaker:Get*
+              - rolesanywhere:ListTagsForResource
+              - rolesanywhere:TagResource
+              - rolesanywhere:Get*
               - route53:ChangeTagsForResource
               - route53:ListTagsForResource
               - route53:ListTagsForResources
               - route53:Get*
+              - route53-recovery-control-config:ListTagsForResource
+              - route53-recovery-control-config:TagResource
+              - route53-recovery-control-config:Get*
+              - route53-recovery-readiness:ListTagsForResources
+              - route53-recovery-readiness:TagResource
+              - route53-recovery-readiness:Get*
               - route53domains:DeleteTagsForDomain
               - route53domains:ListTagsForDomain
               - route53domains:UpdateTagsForDomain
@@ -346,6 +789,9 @@ Resources:
               - route53resolver:ListTagsForResource
               - route53resolver:TagResource
               - route53resolver:Get*
+              - rum:ListTagsForResource
+              - rum:TagResource
+              - rum:Get*
               - s3:DeleteBucketTagging
               - s3:DeleteObjectTagging
               - s3:GetBucketTagging
@@ -353,15 +799,45 @@ Resources:
               - s3:PutBucketTagging
               - s3:PutObjectTagging
               - s3:Get*
+              - s3control:DeleteBucketTagging
+              - s3control:DeleteJobTagging
+              - s3control:DeleteStorageLensConfigurationTagging
+              - s3control:GetBucketTagging
+              - s3control:GetJobTagging
+              - s3control:GetStorageLensConfigurationTagging
+              - s3control:ListTagsForResource
+              - s3control:PutBucketTagging
+              - s3control:PutJobTagging
+              - s3control:PutStorageLensConfigurationTagging
+              - s3control:TagResource
+              - s3control:Get*
               - sagemaker:AddTags
               - sagemaker:DeleteTags
               - sagemaker:ListTags
               - sagemaker:Get*
+              - sagemaker-geospatial:ListTagsForResource
+              - sagemaker-geospatial:TagResource
+              - sagemaker-geospatial:Get*
+              - savingsplans:ListTagsForResource
+              - savingsplans:TagResource
+              - savingsplans:Get*
+              - scheduler:ListTagsForResource
+              - scheduler:TagResource
+              - scheduler:Get*
+              - schemas:ListTagsForResource
+              - schemas:TagResource
+              - schemas:Get*
               - secretsmanager:TagResource
               - secretsmanager:Get*
               - securityhub:ListTagsForResource
               - securityhub:TagResource
               - securityhub:Get*
+              - securitylake:ListTagsForResource
+              - securitylake:TagResource
+              - securitylake:Get*
+              - service-quotas:ListTagsForResource
+              - service-quotas:TagResource
+              - service-quotas:Get*
               - servicecatalog:AssociateTagOptionWithResource
               - servicecatalog:CreateTagOption
               - servicecatalog:DeleteTagOption
@@ -371,6 +847,27 @@ Resources:
               - servicecatalog:ListTagOptions
               - servicecatalog:UpdateTagOption
               - servicecatalog:Get*
+              - servicecatalog-appregistry:ListTagsForResource
+              - servicecatalog-appregistry:TagResource
+              - servicecatalog-appregistry:Get*
+              - servicediscovery:ListTagsForResource
+              - servicediscovery:TagResource
+              - servicediscovery:Get*
+              - sesv2:ListTagsForResource
+              - sesv2:TagResource
+              - sesv2:Get*
+              - shield:ListTagsForResource
+              - shield:TagResource
+              - shield:Get*
+              - signer:ListTagsForResource
+              - signer:TagResource
+              - signer:Get*
+              - simspaceweaver:ListTagsForResource
+              - simspaceweaver:TagResource
+              - simspaceweaver:Get*
+              - snow-device-management:ListTagsForResource
+              - snow-device-management:TagResource
+              - snow-device-management:Get*
               - sns:ListTagsForResource
               - sns:TagResource
               - sns:Get*
@@ -381,6 +878,18 @@ Resources:
               - ssm:ListTagsForResource
               - ssm:RemoveTagsFromResource
               - ssm:Get*
+              - ssm-contacts:ListTagsForResource
+              - ssm-contacts:TagResource
+              - ssm-contacts:Get*
+              - ssm-incidents:ListTagsForResource
+              - ssm-incidents:TagResource
+              - ssm-incidents:Get*
+              - ssm-sap:ListTagsForResource
+              - ssm-sap:TagResource
+              - ssm-sap:Get*
+              - sso-admin:ListTagsForResource
+              - sso-admin:TagResource
+              - sso-admin:Get*
               - stepfunctions:ListTagsForResource
               - stepfunctions:TagResource
               - stepfunctions:Get*
@@ -391,19 +900,70 @@ Resources:
               - swf:ListTagsForResource
               - swf:TagResource
               - swf:Get*
+              - synthetics:ListTagsForResource
+              - synthetics:TagResource
+              - synthetics:Get*
+              - textract:ListTagsForResource
+              - textract:TagResource
+              - textract:Get*
+              - timestream-query:ListTagsForResource
+              - timestream-query:TagResource
+              - timestream-query:Get*
+              - timestream-write:ListTagsForResource
+              - timestream-write:TagResource
+              - timestream-write:Get*
+              - tnb:ListTagsForResource
+              - tnb:TagResource
+              - tnb:Get*
+              - transcribe:ListTagsForResource
+              - transcribe:TagResource
+              - transcribe:Get*
               - transfer:ListTagsForResource
               - transfer:TagResource
               - transfer:Get*
+              - translate:ListTagsForResource
+              - translate:TagResource
+              - translate:Get*
+              - voice-id:ListTagsForResource
+              - voice-id:TagResource
+              - voice-id:Get*
+              - vpc-lattice:ListTagsForResource
+              - vpc-lattice:TagResource
+              - vpc-lattice:Get*
               - waf:ListTagsForResource
               - waf:TagResource
               - waf:Get*
               - waf-regional:ListTagsForResource
               - waf-regional:TagResource
               - waf-regional:Get*
+              - wafv2:ListTagsForResource
+              - wafv2:TagResource
+              - wafv2:Get*
+              - wellarchitected:ListTagsForResource
+              - wellarchitected:TagResource
+              - wellarchitected:Get*
+              - wisdom:ListTagsForResource
+              - wisdom:TagResource
+              - wisdom:Get*
+              - worklink:ListTagsForResource
+              - worklink:TagResource
+              - worklink:Get*
+              - workmail:ListTagsForResource
+              - workmail:TagResource
+              - workmail:Get*
               - workspaces:CreateTags
               - workspaces:DeleteTags
               - workspaces:DescribeTags
               - workspaces:Get*
+              - workspaces-thin-client:ListTagsForResource
+              - workspaces-thin-client:TagResource
+              - workspaces-thin-client:Get*
+              - workspaces-web:ListTagsForResource
+              - workspaces-web:TagResource
+              - workspaces-web:Get*
+              - xray:ListTagsForResource
+              - xray:TagResource
+              - xray:Get*
             Resource:
               - '*'
       Roles:
@@ -439,4 +999,4 @@ Resources:
       Timeout: 600
       MemorySize: 128
       Role: !GetAtt 'LambdaRole.Arn'
-      Runtime: python3.7
+      Runtime: python3.12
